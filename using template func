@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+template <class t>
+class ari{
+private:
+    t a;
+    t b;
+public:
+ari(t a, t b);
+t add();
+t sub();
+};
+template <class t>
+ari<t>::ari(t a, t b){
+    this->a =a;// this refers to data memebers of class
+    this ->b =b;
+}
+template <class t>
+t ari<t>::add(){
+    t c = a+b;
+    return c;
+}
+template <class t>
+ t ari<t>:: sub(){
+    t c= a-b;
+    return c;
+}
+
+int main()
+{
+  ari<int> a(10,5);
+  cout<<"add is "<< a.add();
+  cout<<"sub is "<< a.sub();
+  
+  return 0;
+}
