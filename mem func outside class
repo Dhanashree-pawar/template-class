@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+class ari{
+private:
+    int a;
+    int b;
+public:
+ari(int a, int b);
+int add();
+int sub();
+};
+ari::ari(int a, int b){
+    this->a =a;// this refers to data memebers of class
+    this ->b =b;
+}
+int ari::add(){
+    int c = a+b;
+    return c;
+}
+ int ari:: sub(){
+    int c= a-b;
+    return c;
+}
+
+int main()
+{
+  ari a(10,5);
+  cout<<"add is "<< a.add();
+  cout<<"sub is "<< a.sub();
+  
+  return 0;
+}
